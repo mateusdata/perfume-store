@@ -55,7 +55,7 @@ export default function Home() {
 
       <section className="my-8">
         <motion.a
-          href="https://wa.me/5575982986349"
+          href="https://wa.me/5575982986349?text=Olá,%20vi%20seu%20site%20e%20me%20interessei%20por%20seus%20perfumes."
           target="_blank"
           rel="noopener noreferrer"
           className="bg-green-500 text-white py-2 px-4 rounded-lg font-bold hover:bg-green-600 transition duration-200"
