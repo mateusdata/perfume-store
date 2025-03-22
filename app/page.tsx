@@ -5,35 +5,133 @@ import imagem from "@/public/imagem.png";
 import imagem2 from "@/public/imagem2.png";
 import imagem3 from "@/public/imagem3.png";
 import imagem4 from "@/public/imagem4.png";
+import imagem5 from "@/public/imagem5.png";
+import imagem6 from "@/public/imagem6.png";
+import imagem7 from "@/public/imagem7.png";
+import imagem8 from "@/public/imagem8.png";
+import imagem9 from "@/public/imagem9.png";
+import imagem10 from "@/public/imagem10.png";
+import imagem11 from "@/public/imagem11.png";
+import imagem12 from "@/public/imagem12.png";
+import imagem13 from "@/public/imagem13.png";
+import imagem14 from "@/public/imagem14.png";
+import imagem15 from "@/public/imagem15.png";
+import imagem16 from "@/public/imagem16.png";
 import logo from "@/public/logo.png";
+
+
 
 const perfumes = [
   {
     id: 1,
     src: imagem,
     alt: "Perfume 1",
-    title: "Natura Una Artisan ",
+    title: "",
     description: "Uma mistura requintada de elegância.",
   },
   {
     id: 2,
     src: imagem2,
     alt: "Perfume 2",
-    title: "Essencial Único, da Natura ",
+    title: "",
     description: "Uma fragrância de beleza atemporal.",
   },
   {
     id: 3,
     src: imagem3,
     alt: "Perfume 3",
-    title: "Asad, da Lattafa ",
+    title: "",
     description: "Capture momentos inesquecíveis.",
   },
   {
     id: 4,
     src: imagem4,
     alt: "Perfume 4",
-    title: "Arabes ",
+    title: "",
+    description: "Uma combinação perfeita de sofisticação e elegância.",
+  },
+  {
+    id: 5,
+    src: imagem5,
+    alt: "Perfume 5",
+    title: "",
+    description: "Uma mistura requintada de elegância.",
+  },
+  {
+    id: 6,
+    src: imagem6,
+    alt: "Perfume 6",
+    title: "",
+    description: "Uma fragrância de beleza atemporal.",
+  },
+  {
+    id: 7,
+    src: imagem7,
+    alt: "Perfume 7",
+    title: "",
+    description: "Capture momentos inesquecíveis.",
+  },
+  {
+    id: 8,
+    src: imagem8,
+    alt: "Perfume 8",
+    title: "",
+    description: "Uma combinação perfeita de sofisticação e elegância.",
+  },
+  {
+    id: 9,
+    src: imagem9,
+    alt: "Perfume 9",
+    title: "",
+    description: "Uma mistura requintada de elegância.",
+  },
+  {
+    id: 10,
+    src: imagem10,
+    alt: "Perfume 10",
+    title: "0",
+    description: "Uma fragrância de beleza atemporal.",
+  },
+  {
+    id: 11,
+    src: imagem11,
+    alt: "Perfume 11",
+    title: "1",
+    description: "Capture momentos inesquecíveis.",
+  },
+  {
+    id: 12,
+    src: imagem12,
+    alt: "Perfume 12",
+    title: "2",
+    description: "Uma combinação perfeita de sofisticação e elegância.",
+  },
+  {
+    id: 13,
+    src: imagem13,
+    alt: "Perfume 13",
+    title: "3",
+    description: "Uma mistura requintada de elegância.",
+  },
+  {
+    id: 14,
+    src: imagem14,
+    alt: "Perfume 14",
+    title: "4",
+    description: "Uma fragrância de beleza atemporal.",
+  },
+  {
+    id: 15,
+    src: imagem15,
+    alt: "Perfume 15",
+    title: "5",
+    description: "Capture momentos inesquecíveis.",
+  },
+  {
+    id: 16,
+    src: imagem16,
+    alt: "Perfume 16",
+    title: "6",
     description: "Uma combinação perfeita de sofisticação e elegância.",
   },
 ];
