@@ -1,126 +1,115 @@
 import Image from "next/image";
-import perfume from "@/public/imagem.gif";
-import perfume2 from "@/public/imagem2.gif";
-import perfume3 from "@/public/imagem3.gif";
+import imagem from "@/public/imagem.png";
+import imagem2 from "@/public/imagem2.png";
+import imagem3 from "@/public/imagem3.png";
+import imagem4 from "@/public/imagem4.png";
+import logo from "@/public/logo.png";
+
+
+const perfumes = [
+  {
+    id: 1,
+    src: imagem,
+    alt: "Perfume 1",
+    title: "Natura Una Artisan ",
+    description: "Uma mistura requintada de elegância.",
+  },
+  {
+    id: 2,
+    src: imagem2,
+    alt: "Perfume 2",
+    title: "Essencial Único, da Natura ",
+    description: "Uma fragrância de beleza atemporal.",
+  },
+  {
+    id: 3,
+    src: imagem3,
+    alt: "Perfume 3",
+    title: "Asad, da Lattafa ",
+    description: "Capture momentos inesquecíveis.",
+  },
+  {
+    id: 4,
+    src: imagem4,
+    alt: "Perfume 4",
+    title: "Arabes ",
+    description: "Capture momentos inesquecíveis.",
+  },
+];
 
 export default function Home() {
   return (
-    <div style={{ fontFamily: "Arial, sans-serif", padding: "20px", textAlign: "center" }}>
-      <header>
-        <h1 className="text-4xl font-bold text-gray-700 mb-2">nonaperfumaria</h1>
-        <h2 className="text-2xl text-gray-500 font-light">Nona | Essência & Aroma | Perfumaria</h2>
-        <p style={{ color: "#555" }}>Explore nossa coleção exclusiva</p>
+    <div className="font-sans p-8 text-center">
+      <header className="mb-8">
+        <h1 className="text-4xl font-bold mb-2">nonaperfumaria</h1>
+        <h2 className="text-xl text-gray-400">Nona | Essência & Aroma | Perfumaria</h2>
+        <p className="text-gray-400">Descubra nossa coleção exclusiva de perfumes ✨</p>
       </header>
 
-      <section style={{ marginBottom: "20px" }}>
-        {/* Link para Instagram */}
-        <a
-          href="https://scontent-for2-2.cdninstagram.com/v/t51.2885-19/483438639_9104407999658097_8164724548969486896_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_ht=scontent-for2-2.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2QFnZC6jsz_84d0FUg9zWpnwvVA4IMPSxUoFc6zZ7HUJ2RZQhylA1ta1HwTXaW9MhQYLMTxpU4G--NTRtsvMuy0k&_nc_ohc=KVNbp7ALO1MQ7kNvgFVxDi1&_nc_gid=xiEbTQJu6Pgnou8cEgqolw&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AYEHqpDHcgOpqur4Cr4G9LLDHNCZkkdZ3SFB2iRc-AnskQ&oe=67E3D019&_nc_sid=22de04"
+      <section className="my-8">
+      <a
+          href="https://wa.me/557581796229"
           target="_blank"
           rel="noopener noreferrer"
-          style={{
-            display: "inline-block",
-            marginBottom: "20px",
-            backgroundColor: "#E1306C",
-            color: "#fff",
-            padding: "10px 20px",
-            borderRadius: "5px",
-            textDecoration: "none",
-            fontWeight: "bold",
-          }}
+          className="bg-green-500 text-white py-2 px-4 rounded-lg font-bold hover:bg-green-600 transition duration-200"
         >
-          Visite nosso Instagram
+          Fale conosco pelo WhatsApp
         </a>
       </section>
 
       <section
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-          gap: "20px",
-        }}
+        className="grid gap-6 md:grid-cols-1 lg:grid-cols-1 max-w-5xl mx-auto"
       >
-        {/* Cartões de Perfumes */}
-        <div
-          style={{
-            border: "1px solid #ddd",
-            borderRadius: "8px",
-            overflow: "hidden",
-            boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-          }}
-        >
-          <Image
-            src={perfume}
-            alt="Perfume 1"
-            layout="responsive"
-            width={200}
-            height={200}
-          />
-          <div style={{ padding: "10px" }}>
-          <h3>Perfume Infalível Suave</h3>
-            <p style={{ color: "#555" }}>Uma mistura requintada de elegância.</p>
+
+        <div className=" rounded-lg shadow-md overflow-hidden">
+
+          <div className="w-full max-w-md mx-auto  rounded-lg overflow-hidden">
+            <Image
+              src={logo}
+              alt={"Logo"}
+              layout="responsive"
+              objectFit="contain"
+              className="rounded-lg"
+            />
           </div>
         </div>
-        <div
-          style={{
-            border: "1px solid #ddd",
-            borderRadius: "8px",
-            overflow: "hidden",
-            boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-          }}
-        >
-          <Image
-            src={perfume2}
-            alt="Perfume 2"
-            layout="responsive"
-            width={200}
-            height={200}
-          />
-          <div style={{ padding: "10px" }}>
-            <h3>Perfume Kaik</h3>
-            <p style={{ color: "#555" }}>Uma fragrância de beleza atemporal.</p>
+
+        <h1>Novos perfumes</h1>
+        {perfumes.map((perfume) => (
+          <div
+            key={perfume.id}
+            className=" rounded-lg shadow-md overflow-hidden"
+          >
+            <div className="w-full max-w-md mx-auto border rounded-lg overflow-hidden">
+              <Image
+                src={perfume.src}
+                alt={perfume.alt}
+                layout="responsive"
+                objectFit="contain"
+                className="rounded-lg"
+              />
+            </div>
+
+
+            <div className="p-4">
+              <h3 className="text-lg font-semibold">{perfume.title}</h3>
+              <p className="text-gray-400 mt-2">{perfume.description}</p>
+            </div>
           </div>
-        </div>
-        <div
-          style={{
-            border: "1px solid #ddd",
-            borderRadius: "8px",
-            overflow: "hidden",
-            boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-          }}
-        >
-          <Image
-            src={perfume3}
-            alt="Perfume 3"
-            layout="responsive"
-            width={200}
-            height={200}
-          />
-          <div style={{ padding: "10px" }}>
-            <h3>Perfume Suavage</h3>
-            <p style={{ color: "#555" }}>Capture momentos inesquecíveis.</p>
-          </div>
-        </div>
+        ))}
       </section>
 
-      <footer style={{ marginTop: "20px" }}>
-        {/* Botão do WhatsApp */}
-        <a
-          href="https://wa.me/557581796229"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: "inline-block",
-            backgroundColor: "#25D366",
-            color: "#fff",
-            padding: "10px 20px",
-            borderRadius: "5px",
-            textDecoration: "none",
-            fontWeight: "bold",
-          }}
-        >
-          Fale conosco pelo WhatsApp
-        </a>
+      <footer className="mt-8">
+      <div className=" text-white py-4">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="text-sm">
+            © {new Date().getFullYear()} nonaperfumaria. Todos os direitos reservados.
+          </p>
+          <p className="text-sm mt-2">
+            Desenvolvido por <a href="https://github.com/mateusdata" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline">Mateus Santos</a>.
+          </p>
+        </div>
+      </div>
       </footer>
     </div>
   );
