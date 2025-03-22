@@ -56,7 +56,7 @@ export default function Home() {
             height={200}
           />
           <div style={{ padding: "10px" }}>
-            <h3>Perfume 1</h3>
+          <h3>Perfume Infalível Suave</h3>
             <p style={{ color: "#555" }}>Uma mistura requintada de elegância.</p>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function Home() {
             height={200}
           />
           <div style={{ padding: "10px" }}>
-            <h3>Perfume 2</h3>
+            <h3>Perfume Kaik</h3>
             <p style={{ color: "#555" }}>Uma fragrância de beleza atemporal.</p>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function Home() {
             height={200}
           />
           <div style={{ padding: "10px" }}>
-            <h3>Perfume 3</h3>
+            <h3>Perfume Suavage</h3>
             <p style={{ color: "#555" }}>Capture momentos inesquecíveis.</p>
           </div>
         </div>
