@@ -34,7 +34,7 @@ const perfumes = [
     src: imagem4,
     alt: "Perfume 4",
     title: "Arabes ",
-    description: "Capture momentos inesquecíveis.",
+    description: "Uma combinação perfeita de sofisticação e elegância.",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function Home() {
 
       <section className="grid gap-6 md:grid-cols-1 lg:grid-cols-1 max-w-5xl mx-auto">
         <motion.div
-          className="rounded-lg shadow-md overflow-hidden"
+          className="rounded-lg  overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -88,7 +88,7 @@ export default function Home() {
         </motion.div>
 
         <motion.h1
-          className="text-2xl font-semibold text-gray-300"
+          className="text-2xl font-semibold "
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -100,13 +100,13 @@ export default function Home() {
         {perfumes.map((perfume) => (
           <motion.div
             key={perfume.id}
-            className="rounded-lg shadow-md overflow-hidden"
+            className="rounded-lg  overflow-hidden"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="w-full max-w-md mx-auto border rounded-lg overflow-hidden">
+            <div className="w-full max-w-md mx-auto  rounded-lg overflow-hidden">
               <Image
                 src={perfume.src}
                 alt={perfume.alt}
@@ -126,7 +126,7 @@ export default function Home() {
 
       <footer className="mt-8">
         <motion.div
-          className="text-white py-4"
+          className="py-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
