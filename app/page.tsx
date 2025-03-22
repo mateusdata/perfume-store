@@ -1,7 +1,7 @@
 import Image from "next/image";
-import perfume from "@/public/perfume.png";
-import perfume2 from "@/public/perfume2.jpg";
-import perfume3 from "@/public/perfume3.jpg";
+import perfume from "@/public/imagem.gif";
+import perfume2 from "@/public/imagem2.gif";
+import perfume3 from "@/public/imagem3.gif";
 
 export default function Home() {
   return (
