@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import logoPerfume from "@/public/logoPerfume.png";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -12,19 +12,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Atualize o título, descrição e adicione a imagem da meta tag
+// Metadados atualizados
 export const metadata: Metadata = {
-  title: "Vitrine de Perfumes", // Novo título
-  description: "Explore nossa coleção exclusiva de perfumes.", // Descrição personalizada
+  title: "Nona Perfumaria | Essência & Aroma 🌸", // Título que você mencionou
+  description: "Nona | Essência & Aroma | Perfumaria - Explore uma experiência única e personalizada. ✨", // Nova descrição
   openGraph: {
-    title: "Vitrine de Perfumes",
-    description: "Descubra nossa seleção incrível de fragrâncias.",
+    title: "Nona Perfumaria | Essência & Aroma 🌸",
+    description: "Descubra fragrâncias irresistíveis que capturam sua essência única. ✨",
     images: [
       {
-        url: "https://example.com/imagem-perfume.jpg", // Substitua pelo link correto da imagem
-        width: 800,
-        height: 600,
-        alt: "Imagem de destaque - Perfumes",
+        url: "https://scontent-for2-2.cdninstagram.com/v/t51.2885-19/483438639_9104407999658097_8164724548969486896_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_ht=scontent-for2-2.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2QFnZC6jsz_84d0FUg9zWpnwvVA4IMPSxUoFc6zZ7HUJ2RZQhylA1ta1HwTXaW9MhQYLMTxpU4G--NTRtsvMuy0k&_nc_ohc=KVNbp7ALO1MQ7kNvgFVxDi1&_nc_gid=xiEbTQJu6Pgnou8cEgqolw&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AYEHqpDHcgOpqur4Cr4G9LLDHNCZkkdZ3SFB2iRc-AnskQ&oe=67E3D019&_nc_sid=22de04", // Link fornecido
+        width: 150,
+        height: 150,
+        alt: "Logo Nona Perfumaria", // Texto alternativo
       },
     ],
   },
@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://scontent-for2-2.cdninstagram.com/v/t51.2885-19/483438639_9104407999658097_8164724548969486896_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_ht=scontent-for2-2.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2QFnZC6jsz_84d0FUg9zWpnwvVA4IMPSxUoFc6zZ7HUJ2RZQhylA1ta1HwTXaW9MhQYLMTxpU4G--NTRtsvMuy0k&_nc_ohc=KVNbp7ALO1MQ7kNvgFVxDi1&_nc_gid=xiEbTQJu6Pgnou8cEgqolw&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AYEHqpDHcgOpqur4Cr4G9LLDHNCZkkdZ3SFB2iRc-AnskQ&oe=67E3D019&_nc_sid=22de04" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
