@@ -7,14 +7,15 @@ export default function Home() {
   return (
     <div style={{ fontFamily: "Arial, sans-serif", padding: "20px", textAlign: "center" }}>
       <header>
-        <h1>Vitrine de Perfumes</h1>
+        <h1 className="text-4xl font-bold text-gray-700 mb-2">nonaperfumaria</h1>
+        <h2 className="text-2xl text-gray-500 font-light">Nona | Essência & Aroma | Perfumaria</h2>
         <p style={{ color: "#555" }}>Explore nossa coleção exclusiva</p>
       </header>
 
       <section style={{ marginBottom: "20px" }}>
         {/* Link para Instagram */}
         <a
-          href="https://www.instagram.com/mateus.data"
+          href="https://scontent-for2-2.cdninstagram.com/v/t51.2885-19/483438639_9104407999658097_8164724548969486896_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_ht=scontent-for2-2.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2QFnZC6jsz_84d0FUg9zWpnwvVA4IMPSxUoFc6zZ7HUJ2RZQhylA1ta1HwTXaW9MhQYLMTxpU4G--NTRtsvMuy0k&_nc_ohc=KVNbp7ALO1MQ7kNvgFVxDi1&_nc_gid=xiEbTQJu6Pgnou8cEgqolw&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AYEHqpDHcgOpqur4Cr4G9LLDHNCZkkdZ3SFB2iRc-AnskQ&oe=67E3D019&_nc_sid=22de04"
           target="_blank"
           rel="noopener noreferrer"
           style={{
