@@ -139,6 +139,19 @@ const perfumes = [
 export default function Home() {
   return (
     <div className="font-sans p-8 text-center">
+
+ 
+    <a
+      href="https://www.canva.com/design/DAGtPKamhIg/BZ1orkPRNQ5EVBVT-IkdYg/view?utm_content=DAGtPKamhIg&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
+      target="_blank"
+      rel="noopener"
+      className="text-blue-500 underline block mb-4"
+    >
+      Apresentação portfólio de social media modelo laranja
+    </a>
+    <span className="block text-xs text-gray-400 mb-4">
+      de Lucineide Santos Ribeiro Oliveira
+    </span>
       <header className="mb-8">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
