@@ -18,6 +18,7 @@ import imagem14 from "@/public/imagem14.png";
 import imagem15 from "@/public/imagem15.png";
 import imagem16 from "@/public/imagem16.png";
 import logo from "@/public/logo.png";
+import Link from "next/link";
 
 
 
@@ -139,19 +140,13 @@ const perfumes = [
 export default function Home() {
   return (
     <div className="font-sans p-8 text-center">
+      <Link
+        href="/canvas"
+        className="text-blue-500 underline block mb-4"
+      >
+        Apresentação portfólio Canvas
+      </Link>
 
- 
-    <a
-      href="https://www.canva.com/design/DAGtPKamhIg/BZ1orkPRNQ5EVBVT-IkdYg/view?utm_content=DAGtPKamhIg&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
-      target="_blank"
-      rel="noopener"
-      className="text-blue-500 underline block mb-4"
-    >
-      Apresentação portfólio de social media modelo laranja
-    </a>
-    <span className="block text-xs text-gray-400 mb-4">
-      de Lucineide Santos Ribeiro Oliveira
-    </span>
       <header className="mb-8">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
