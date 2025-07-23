@@ -1,5 +1,12 @@
 // app/page.tsx
 "use client"; // Necessário para o efeito de scroll do header
+import image from "@/public/image.jpeg";
+import concept from "@/public/concept.jpeg";
+import projeto1 from "@/public/projeto1.jpeg";
+import projeto2 from "@/public/projeto2.jpeg";
+import projeto3 from "@/public/projeto3.jpeg";
+
+
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
@@ -34,16 +41,23 @@ export default function Home() {
   return (
     <main>
       {/* ===== HEADER ===== */}
-      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? ' shadow-md' : 'bg-transparent'}`}>
-        <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-black text-primary">NONA CONCEPT</h1>
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="#sobre" className="text-dark-light hover:text-primary transition-colors">Sobre Mim</Link>
-            <Link href="#habilidades" className="text-dark-light hover:text-primary transition-colors">Habilidades</Link>
-            <Link href="#portfolio" className="text-dark-light hover:text-primary transition-colors">Projetos</Link>
-            <Link href="#contato" className="bg-primary  px-4 py-2 rounded-md hover:bg-primary-light transition-colors">Contato</Link>
-          </div>
-        </nav>
+      <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+        ? "backdrop-blur-md bg-white/10 shadow-md"
+        : "backdrop-blur-md "
+      }`}
+      style={{ WebkitBackdropFilter: "blur(12px)" }}
+      >
+      <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 className="text-2xl font-black text-primary">NONA CONCEPT</h1>
+        <div className="hidden md:flex items-center space-x-8">
+        <Link href="#sobre" className="text-dark-light hover:text-primary transition-colors">Sobre Mim</Link>
+        <Link href="#habilidades" className="text-dark-light hover:text-primary transition-colors">Habilidades</Link>
+        <Link href="#portfolio" className="text-dark-light hover:text-primary transition-colors">Projetos</Link>
+        <Link href="#contato" className="bg-primary  px-4 py-2 rounded-md hover:bg-primary-light transition-colors">Contato</Link>
+        </div>
+      </nav>
       </header>
 
       {/* ===== SEÇÃO HERO ===== */}
@@ -65,7 +79,7 @@ export default function Home() {
           </div>
           <div className="md:w-1/2 flex justify-center">
             <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px]">
-              <Image src="/images/lucy-santos-hero.jpg" alt="Lucy Santos" layout="fill" objectFit="cover" className="rounded-full shadow-2xl"/>
+              <Image src={image} alt="Nona" layout="fill" objectFit="cover" className="rounded-full shadow-2xl"/>
             </div>
           </div>
         </div>
@@ -76,7 +90,7 @@ export default function Home() {
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/3 flex justify-center">
             <div className="relative w-80 h-80">
-              <Image src="/images/lucy-santos-about.jpg" alt="Lucy Santos em palestra" layout="fill" objectFit="cover" className="rounded-xl shadow-lg transform -rotate-3 transition-transform hover:rotate-0"/>
+              <Image src={concept} alt="Lucy Santos em palestra" layout="fill" objectFit="cover" className="rounded-xl shadow-lg transform -rotate-3 transition-transform hover:rotate-0"/>
             </div>
           </div>
           <div className="md:w-2/3 text-center md:text-left">
@@ -105,7 +119,7 @@ export default function Home() {
             <div className="md:w-1/3">
               <ul className="space-y-4">
                 {skillsList.map(skill => (
-                  <li key={skill} className="bg-white p-4 rounded-lg shadow-md flex items-center">
+                  <li key={skill} className="bg-green-500 p-4 rounded-lg shadow-md flex items-center">
                     <span className="text-secondary text-2xl mr-4">✓</span>
                     <span className="font-bold text-dark-light">{skill}</span>
                   </li>
@@ -124,16 +138,21 @@ export default function Home() {
             Cada projeto é uma história de sucesso. Aqui estão alguns exemplos de como contribuí para o crescimento digital de marcas.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            {projects.map(p => (
-              <div key={p.title} className="bg-light rounded-lg shadow-lg overflow-hidden group">
-                <div className="w-full h-48 bg-gray-300 flex items-center justify-center text-gray-500 font-semibold">
-                  {/* Substitua esta div pela sua <Image /> do projeto */}
-                  Imagem do Projeto
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary group-hover:text-secondary transition-colors">{p.title}</h3>
-                  <p className="mt-2 text-dark-light">{p.desc}</p>
-                </div>
+            {[projeto1, projeto2, projeto3].map((img, idx) => (
+              <div key={projects[idx].title} className="bg-light rounded-lg shadow-lg overflow-hidden group">
+              <div className="w-full h-48 relative">
+                <Image
+                src={img}
+                alt={`Imagem do projeto ${projects[idx].title}`}
+                layout="fill"
+                objectFit="cover"
+                className="transition-transform group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-primary group-hover:text-secondary transition-colors">{projects[idx].title}</h3>
+                <p className="mt-2 text-dark-light">{projects[idx].desc}</p>
+              </div>
               </div>
             ))}
           </div>
