@@ -34,14 +34,14 @@ export default function Home() {
   return (
     <main>
       {/* ===== HEADER ===== */}
-      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? ' shadow-md' : 'bg-transparent'}`}>
+      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-black text-primary">NONA CONCEPT</h1>
           <div className="hidden md:flex items-center space-x-8">
             <Link href="#sobre" className="text-dark-light hover:text-primary transition-colors">Sobre Mim</Link>
             <Link href="#habilidades" className="text-dark-light hover:text-primary transition-colors">Habilidades</Link>
             <Link href="#portfolio" className="text-dark-light hover:text-primary transition-colors">Projetos</Link>
-            <Link href="#contato" className="bg-primary  px-4 py-2 rounded-md hover:bg-primary-light transition-colors">Contato</Link>
+            <Link href="#contato" className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-light transition-colors">Contato</Link>
           </div>
         </nav>
       </header>
@@ -59,7 +59,7 @@ export default function Home() {
             <p className="mt-2 text-md text-dark-light">
               Estratégias criativas e resultados impactantes.
             </p>
-            <a href="#portfolio" className="mt-8 inline-block bg-secondary  font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity">
+            <a href="#portfolio" className="mt-8 inline-block bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity">
               Ver Projetos
             </a>
           </div>
@@ -72,7 +72,7 @@ export default function Home() {
       </section>
 
       {/* ===== SEÇÃO SOBRE MIM ===== */}
-      <section id="sobre" className="py-20">
+      <section id="sobre" className="py-20 bg-white">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/3 flex justify-center">
             <div className="relative w-80 h-80">
@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       {/* ===== SEÇÃO PORTFÓLIO ===== */}
-      <section id="portfolio" className="py-20">
+      <section id="portfolio" className="py-20 bg-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-black text-primary mb-4">PORTFÓLIO DE PROJETOS</h2>
           <p className="text-lg text-dark-light mb-12 max-w-2xl mx-auto">
@@ -141,11 +141,11 @@ export default function Home() {
       </section>
 
       {/* ===== RODAPÉ / CONTATO ===== */}
-      <footer id="contato" className="  py-12">
+      <footer id="contato" className="bg-dark text-white py-12">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Vamos Conectar?</h2>
           <p className="mb-6 text-gray-300">Estou sempre aberta a novas oportunidades e colaborações.</p>
-          <a href="mailto:contato@nonaconcept.com" className="bg-secondary  font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity">
+          <a href="mailto:contato@nonaconcept.com" className="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity">
             contato@nonaconcept.com
           </a>
           <div className="mt-8">
